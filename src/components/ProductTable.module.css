@@ -11,10 +11,10 @@ body {
     text-align: left;
 }
 .table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #db9898;
 }
 .table th {
-    background-color: #4CAF50;
+    background-color: #52c5b6;
     color: white;
 }
 .actions {
