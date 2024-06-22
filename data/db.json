@@ -1,10 +1,40 @@
 {
   "products": [
     {
-      "name": "Uva",
-      "price": "15",
-      "stock": "30",
-      "id": "630f"
+      "id": "3273",
+      "type": "Carro",
+      "brand": "Hyundai",
+      "model": "Elantra",
+      "year": "2013",
+      "price": "58999"
+    }
+  ],
+  "users": [
+    {
+      "id": "a682",
+      "username": "admin",
+      "password": "admin",
+      "name": "João Augusto",
+      "email": "ajoao7421@gmail.com",
+      "age": "20"
+    },
+    {
+      "id": "8602",
+      "username": "joao",
+      "password": "tiziu",
+      "name": "João Paulo",
+      "email": "joaopaulonmts@gmail.com",
+      "age": "25"
+    }
+  ],
+  "services": [
+    {
+      "type": "Venda",
+      "state": "Santa Catarina",
+      "city": "Blumenau",
+      "date": "2023-04-19",
+      "value": "62500",
+      "id": "1f5e"
     }
   ]
 }
