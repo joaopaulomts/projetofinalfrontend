@@ -1,42 +1,40 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import "./Table.css";
+import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import "./Table.css"
 
-export default function Servico() {
-  const [services, setServices] = useState([]);
+export default function Servico(){
 
-  const url = "http://localhost:3000/services";
+  const [services, setServices] = useState([])
+
+  const url = 'http://localhost:3000/services'
 
   useEffect(() => {
-    const getServicesList = async () => {
-      const res = await fetch(url);
-      const data = await res.json();
-      setServices(data);
-      console.log(data);
-    };
+    const getServicesList = async() => {
+      const res = await fetch(url)
+      const data = await res.json()
+      setServices(data)
+      console.log(data)
+    }
 
-    getServicesList();
-  }, []);
+    getServicesList()
+
+  }, [])
 
   const deleteService = async (id) => {
     const res = await fetch(url + `/${id}`, {
       method: "DELETE",
       headers: {
-        "content-type": "application/json",
+        "content-type": "application/json"
       },
-    });
+    })
 
-    const deletedService = await res.json();
-    setServices(services.filter((srv) => srv.id !== deletedService.id));
-  };
+    const deletedService = await res.json()
+    setServices(services.filter(srv => srv.id !== deletedService.id))
+  }
 
   return (
-    <div className="container">
-      <button>
-        <Link to="/app/cadastrar-servico" className="cadastrar-button">
-          Cadastrar Serviço
-        </Link>
-      </button>
+    <div className="table-container">
+      <button className="cadastrar-button"><Link to="/app/cadastrar-servico" className="cadastrar-button-link">Cadastrar Serviço</Link></button>
       <h2 className="table-title">Cadastro de Serviços</h2>
       <table>
         <thead>
@@ -60,25 +58,13 @@ export default function Servico() {
               <td>{service.date}</td>
               <td>{service.value}</td>
               <td className="actions">
-                <button className="table-edit">
-                  <Link
-                    to={`/app/editar-servico/${service.id}`}
-                    className="table-edit-link"
-                  >
-                    Editar
-                  </Link>
-                </button>
-                <button
-                  onClick={() => deleteService(service.id)}
-                  className="table-delete"
-                >
-                  Excluir
-                </button>
+                <button className="table-edit"><Link to={`/app/editar-servico/${service.id}`} className="table-edit-link">Editar</Link></button>
+                <button className="table-delete" onClick={() => deleteService(service.id)}>Excluir</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
-  );
+  )
 }

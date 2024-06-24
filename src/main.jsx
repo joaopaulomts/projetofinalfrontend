@@ -2,12 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
-import Produto from "./routes/tabelas/Product.jsx";
+import Produto from "./routes/tabelas/Produto.jsx";
 import ProductForm from "./routes/formularios/ProductForm.jsx";
-import Usuario from "./routes/tabelas/User.jsx";
+import Usuario from "./routes/tabelas/Usuário.jsx";
 import UserForm from "./routes/formularios/UserForm.jsx";
-import Servico from "./routes/tabelas/Service.jsx";
+import Servico from "./routes/tabelas/Serviço.jsx";
 import ServiceForm from "./routes/formularios/ServiceForm.jsx";
+import Login from "./components/login/Login.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import "./index.css";
 
