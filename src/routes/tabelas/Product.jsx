@@ -31,9 +31,9 @@ export default function Produto() {
   };
 
   return (
-    <div className="container">
-      <button>
-        <Link to="/app/cadastrar-produto" className="cadastrar-button">
+    <div className="table-container">
+      <button className="cadastrar-button">
+        <Link to="/app/cadastrar-produto" className="cadastrar-button-link">
           Cadastrar Veículo
         </Link>
       </button>
@@ -69,8 +69,8 @@ export default function Produto() {
                   </Link>
                 </button>
                 <button
-                  onClick={() => deleteProduct(product.id)}
                   className="table-delete"
+                  onClick={() => deleteProduct(product.id)}
                 >
                   Excluir
                 </button>

@@ -8,6 +8,7 @@ import Usuario from "./routes/tabelas/User.jsx";
 import UserForm from "./routes/formularios/UserForm.jsx";
 import Servico from "./routes/tabelas/Service.jsx";
 import ServiceForm from "./routes/formularios/ServiceForm.jsx";
+import Login from "./components/login/Login.jsx";
 import ErrorPage from "./routes/ErrorPage.jsx";
 import "./index.css";
 

@@ -31,9 +31,9 @@ export default function Servico() {
   };
 
   return (
-    <div className="container">
-      <button>
-        <Link to="/app/cadastrar-servico" className="cadastrar-button">
+    <div className="table-container">
+      <button className="cadastrar-button">
+        <Link to="/app/cadastrar-servico" className="cadastrar-button-link">
           Cadastrar Serviço
         </Link>
       </button>
@@ -69,8 +69,8 @@ export default function Servico() {
                   </Link>
                 </button>
                 <button
-                  onClick={() => deleteService(service.id)}
                   className="table-delete"
+                  onClick={() => deleteService(service.id)}
                 >
                   Excluir
                 </button>

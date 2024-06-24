@@ -55,7 +55,7 @@ export default function ProductForm() {
   };
 
   return (
-    <div className="container">
+    <div className="form-container">
       <h2 className="form-title">Cadastrar Veículo</h2>
       <form onSubmit={saveProduct}>
         <label htmlFor="type">Tipo de Veículo:</label>
@@ -65,8 +65,11 @@ export default function ProductForm() {
           onChange={(e) => setType(e.target.value)}
           required
         >
-          <option value="opcao1">Carro</option>
-          <option value="opcao2">Moto</option>
+          <option value="" hidden>
+            Selecione
+          </option>
+          <option value="Carro">Carro</option>
+          <option value="Moto">Moto</option>
         </select>
         <label htmlFor="brand">Marca:</label>
         <input

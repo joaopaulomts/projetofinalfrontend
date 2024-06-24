@@ -31,9 +31,9 @@ export default function Usuario() {
   };
 
   return (
-    <div className="container">
-      <button>
-        <Link to="/app/cadastrar-usuario" className="cadastrar-button">
+    <div className="table-container">
+      <button className="cadastrar-button">
+        <Link to="/app/cadastrar-usuario" className="cadastrar-button-link">
           Cadastrar Usuário
         </Link>
       </button>
@@ -65,8 +65,8 @@ export default function Usuario() {
                   </Link>
                 </button>
                 <button
-                  onClick={() => deleteUser(user.id)}
                   className="table-delete"
+                  onClick={() => deleteUser(user.id)}
                 >
                   Excluir
                 </button>
